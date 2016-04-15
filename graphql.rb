@@ -5,7 +5,7 @@ class MyQuery
 
   def perform
     GraphQL.execute(<<-GRAPHQL, :user_id => @user_id)
-      {
+      query {
         user(id: $user_id) {
           profile {
             location
